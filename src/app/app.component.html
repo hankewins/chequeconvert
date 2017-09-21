@@ -1,20 +1,31 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
-  <img width="300" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+
+<div class="cc-main-wrap">
+	<div class="title"><h1>{{title}}</h1></div>
+	<div class="form">
+		<input class="input" type="text" name="num" placeholder="请输入待转换货币金额" value="" (input)="onInputEvent($event)" />
+	</div>
+	<div class="panel panel-primary">
+		<h3>中文大写写法：</h3>
+		{{zh_cheque}}
+	</div>
+	<div class="panel panel-primary">
+		<h3>中文大寫寫法：</h3>
+		{{tw_cheque}}
+	</div>
+	<div class="panel panel-primary">
+		<h3>英文大写写法：</h3>
+		{{en_cheque}}
+	</div>
+	<div class="panel panel-tips">
+		支票小知识：<br>
+		如须使用支票，必须到银行开设一个往来帐户(Current Account)。<br>
+		支票通常可以用中、英文两种语言之一填写。而若用中文，必须使用繁体中文。<br>
+		支票金额中「正」亦可写为「整」字也可以，不能写为「零角零分」。<br>
+		如以英文填写付款的金额，百位和后面的数字之间可以加「And」，也可以不加，但必须在最后加上「Only」。<br>
+		不划线支票：任何持票人均可即时提取现金。<br>
+		左上角划两条斜线：需存入收款人户口。<br>
+		划去「持票人」：只有支票抬头写上的人仕才可兑现支票。
+	</div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+
 
