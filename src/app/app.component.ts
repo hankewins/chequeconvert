@@ -103,7 +103,7 @@ function getUnitStr(str, l2w, h2w, units){
 }
 
 function _parseUnitStr(matchs, str, l2w, h2w, part){
-  //Quintillion 10的18次方 Quadrillion 10的15次方
+  // Quintillion 10的18次方 Quadrillion 10的15次方
   var result = '', units = ['', 'Quintillion, ', 'Quadrillion, ', 'Trillion, ', 'Billion, ', 'Million, ', 'Thousand, ', ''];
   if(str > 0 && str % 100 == 0){
     result += l2w[str[0]] + 'Hundred ';
@@ -116,7 +116,8 @@ function _parseUnitStr(matchs, str, l2w, h2w, part){
     result += (str[1] + str[2]) <= 19 && (str[1] + str[2]) > 0 ? l2w[+(str[1] + str[2])] : '';
   }
   if(matchs[7] <= 99 && part <= 6){
-    result += str > 0 ? units[part].substr(0, units[part].length-2) + ' and ' : '';
+    console.log(matchs,matchs[7] == 0,part,str);
+    result += str > 0 ? units[part].substr(0, units[part].length - 2) + (matchs[7] == 0 ? ' ' : ' and ') : '';
   } else {
     result += str > 0 ? units[part] : '';
   }
